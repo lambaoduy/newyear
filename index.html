@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="content-section">
+            <div style="width: 100%;
+           text-align: center;">
+                <H2 style="background-color: rgb(250,219,66);
+                width: 200px; display: inline-block; border-radius: 8px; padding: 8px;">Lì xì cho mình nhé</H2>
+            </div>
+            <div class="content-btnsection">
+                <button id="noBtn" class="content-btn" style="background-color: red;">Đéo</button>
+                <button id="yesBtn" class="content-btn" style="background-color: green;">OK</button>
+            </div>
+        </div>
+    </div>
+    <div id="show-section" class="ok-section">
+        <div class="ok-content-section">
+            <H3>Đây là stk nhé</H3>
+            <br>
+            <h3>****************</h3>
+            <div class="image">
+                <img src="img/tknh.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    document.getElementById('noBtn').addEventListener('click', function () {
+        moveButtonRandomly(this);
+    });
+    document.getElementById('noBtn').addEventListener('mouseenter', function () {
+        moveButtonRandomly(this);
+    });
+    document.getElementById('yesBtn').addEventListener('click', function () { show('show-section') });
+
+    function moveButtonRandomly(button) {
+        const newX = Math.random() * (window.innerWidth - button.clientWidth);
+        const newY = Math.random() * (window.innerHeight - button.clientHeight);
+        const distance = Math.sqrt(Math.pow(newX - noBtn.offsetLeft, 2) + Math.pow(newY - noBtn.offsetTop, 2));
+        if (distance < 100) {
+            moveButtonRandomly(button);
+            return;
+        }
+
+        button.style.position = 'absolute';
+        button.style.left = newX + 'px';
+        button.style.top = newY + 'px';
+    }
+    function show(id) {
+       document.getElementById('show-section').classList.add('open');
+    }
+</script>
+
+</html>

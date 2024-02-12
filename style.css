@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(96, 13, 7);
+
+}
+
+.content {
+    width: 100%;
+    min-height: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.content-section {
+    background-color: rgb(96, 13, 7);
+    width: 630px;
+    max-height: 375px;
+    margin: 0 16px;
+    vertical-align: middle;
+    background-image: url('img/background-tet-17.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 64px;
+}
+
+.content-btn {
+    padding: 32px 64px;
+    color: #fff;
+    margin: 16px;
+    border-radius: 16px;
+}
+
+.ok-section {
+    display: none;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+
+}
+
+.ok-content-section {
+    margin-top: 40%;
+    width: 400px;
+    max-height: 400px;
+    vertical-align: middle;
+    background-image: url('img/pngtree-background-of-new-years-boxing-gift-image_1791.jpg');
+    border-radius: 16px;
+    animation:fadein ease 0.5s ;
+}
+
+.open {
+    display: flex;
+}
+
+.image {
+    width: 100%;
+}
+
+.image img {
+    width: 50%;
+}
+@keyframes fadein{
+    from{
+        transform: translateY(-140px);
+    }to{
+        transform: translateY(0);
+    }
+}
+/* mobile */
+@media (max-width:400px) {
+    .content-btn{
+        padding: 16px 32px;
+    }
+}
